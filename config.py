@@ -9,4 +9,4 @@ jmxFolderPath="jmeter\\bin\\tests\\"
 
 
 
-setPathCommand = "SET PATH=%PATH%;"+thisDir+jMeterPath
+setPathCommand = "SET PATH=%PATH%;"+jMeterPath
