@@ -4,7 +4,7 @@
 # with user defined parameters.
 import Tkinter
 import subprocess, shlex, Tkconstants, tkFileDialog
-import config 
+import config
 
 class PyJmx(Tkinter.Frame):
 
@@ -13,14 +13,15 @@ class PyJmx(Tkinter.Frame):
 		Tkinter.Frame.__init__(self, root)
 		# options for buttons
 		button_style = {'fill': Tkconstants.BOTH, 'padx': 5, 'pady': 5}
-
+		self.frame = Tkinter.Frame(root);
+		self.frame.grid(column=0,row=0)
 		# define buttons and labels
 		self.currentFile = Tkinter.StringVar()
 		self.currentFile.set('[No file Chosen]')
-		Tkinter.Label(self, textvariable=self.currentFile).pack()
+		Tkinter.Label(self.frame, textvariable=self.currentFile).pack()
 
-		Tkinter.Button(self, text='Select File', command=self.getFilename).pack(**button_style)
-		Tkinter.Button(self, text="Run With JMeter", command=self.runJmeter).pack(**button_style)
+		Tkinter.Button(self.frame, text='Select File', command=self.getFilename).grid(row=2,column=1).pack()
+		Tkinter.Button(self.frame, text='Run With JMeter', command=self.runJmeter).grid(row=2,column=2).pack()
 		# define options for opening or saving a file
 		self.file_opt = options = {}
 		options['filetypes'] = [('all files', '.*'), ('text files', '.txt')]
@@ -47,7 +48,7 @@ class PyJmx(Tkinter.Frame):
 		#cmdStr = shlex.split(cmdStr)
 		#subprocess.Popen(cmdStr)
 		subprocess.call(cmdStr, shell=True)
-	
+
 
 if __name__=='__main__':
 	root = Tkinter.Tk()
