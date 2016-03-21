@@ -17,7 +17,7 @@ def tick(pyJmx):
 
 if __name__=='__main__':
 	root = Tkinter.Tk()
-	root.resizable(width=False, height=False)
+	#root.resizable(width=False, height=False)
 	pyJmxInstance = PyJmx.window(root)
 	root.title("pyJMX")
 	tick(pyJmxInstance)
