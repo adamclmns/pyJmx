@@ -22,8 +22,10 @@ This was written on Ubuntu, and then ported to windows for a proof of concept.
 This is not a finished product. 
 
 Known issues: 
-  No spaces allowed in paths or file names on Windows (test in Windows 10)
-  Code changes required between Linux and Windows. Need to make these dynamic. 
+ * No spaces allowed in paths or file names on Windows (test in Windows 10)
+   Code changes required between Linux and Windows. Need to make these dynamic.
+ * Console is not thread safe on UI. You can wait a long time for your output. 
+  
   
   
 Intended features:
