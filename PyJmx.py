@@ -102,6 +102,7 @@ class window(Tkinter.Frame):
 			#cmdStr = shlex.split(cmdStr)
 			self.process = subprocess.Popen(cmdStr, shell=True, stdout=subprocess.PIPE )
 			print(self.process.communicate())
+			#TODO: Stream the jmeter.log instead of console stdout
 
 
 	def userAlert(self, message):
