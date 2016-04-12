@@ -27,7 +27,7 @@ Known issues:
  * Console is not thread safe on UI. You can wait a long time for your output. 
   
   
-  
+   
 Intended features:
   Run configurations - A small set of parameters (thread count, csv source, master-hostname, etc) 
       could be injected into the jmx file according to a saved pyJmx confiruation file, allowing 
